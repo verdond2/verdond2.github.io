@@ -2,7 +2,7 @@
     ==========================================================================
 
     Home
-    1. 
+    1. Header
 
     CSS FORMATTING
     1. Positioning
@@ -14,5 +14,82 @@
     ========================================================================== */
 
 /*  ========================================================================== 
-	1. 
+	1. Header
     ========================================================================== */
+    
+    body {
+        background: url('../images/bg.png') repeat top left;
+    }
+
+    .header {
+        @include center(680px, $pad:15px);
+        margin-top: 200px;
+        text-align: center;
+
+        p {
+            margin-bottom: 25px;
+        }
+    }
+    
+/*  Header Title
+    ========================================================================== */
+
+    .header-title {
+        margin: 0px 0px 30px;
+        @include font-size(42);
+        line-height: 1;
+        color: $blue;
+    }
+    
+/*  Header Sub Title
+    ========================================================================== */
+
+    .header-title-sub {
+        margin-top: 5px;
+        position: relative;
+        display: block;
+        @extend .sans-regular;
+        @include font-size(32);
+        color: $navy;
+
+        &:before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin: 0px auto;
+
+        }
+    }
+    
+/*  Contact Link
+    ========================================================================== */
+
+    .contact-link {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;  
+        font-size: 0px; 
+
+        &:hover {
+            .icon-contact-std {
+                fill: $blue;
+            }
+        }
+    }
+    
+/*  Contact Link Twitter
+    ========================================================================== */
+
+    .contact-link-twitter {
+        background-color: $navy;
+        @include transition(all 0.2s ease-in-out);
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+

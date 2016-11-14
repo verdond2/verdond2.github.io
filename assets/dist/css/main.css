@@ -397,6 +397,139 @@ textarea {
 
 /*  Jeet
 	========================================================================== */
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$g=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [g=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
 /*  Breakpoint SASS
 	========================================================================== */
 /*  Bourbon
@@ -693,49 +826,29 @@ img {
 /*  ========================================================================== 
     1. Font Definitions
     ========================================================================== */
-@font-face {
-  font-family: open_sansregular;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg"); }
+.sans-regular, body, input,
+label,
+select, textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]),
+select[multiple=multiple], .header-title-sub, .sans-bold, strong,
+p.bold {
+  font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: normal; }
 
-@font-face {
-  font-family: open_sansbold;
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff"), url("../fonts/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/opensans-bold-webfont.svg#open_sansbold") format("svg"); }
-
-@font-face {
-  font-family: open_sansitalic;
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-italic-webfont.woff2") format("woff2"), url("../fonts/opensans-italic-webfont.woff") format("woff"), url("../fonts/opensans-italic-webfont.ttf") format("truetype"), url("../fonts/opensans-italic-webfont.svg#open_sansitalic") format("svg"); }
-
-/*  Open Sans Regular
+/*  Montserrat Regular
     ========================================================================== */
 .sans-regular, body, input,
 label,
 select, textarea,
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]),
-select[multiple=multiple] {
-  font-family: "open_sansregular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 400;
-  font-style: normal; }
+select[multiple=multiple], .header-title-sub {
+  font-weight: 400; }
 
-/*  Open Sans Italic
-    ========================================================================== */
-.sans-italic, em {
-  font-family: "open_sansitalic", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 400;
-  font-style: italic; }
-
-/*  Open Sans Bold
+/*  Montserrat Bold
     ========================================================================== */
 .sans-bold, strong,
 p.bold {
-  font-family: "open_sansbold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 700;
-  font-style: normal; }
+  font-weight: 700; }
 
 /*  ==========================================================================
     2. General Fonts 
@@ -749,8 +862,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
   font-feature-settings: "kern", "liga", "frac", "pnum";
   -webkit-font-smoothing: antialiased;
-  background-color: #ffffff;
-  color: #353c40;
+  background-color: #e1e3e4;
+  color: #343434;
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.5; }
@@ -795,10 +908,10 @@ p {
   margin: 0 0 0.75rem; }
 
 a {
-  color: #da1c23;
-  text-decoration: none; }
+  color: #0853a8;
+  text-decoration: underline; }
   a:hover {
-    color: #961318; }
+    text-decoration: none; }
   a:active, a:focus {
     color: #961318;
     outline: none; }
@@ -813,12 +926,12 @@ hr {
 
 blockquote {
   border-left: 2px solid #e8e8e8;
-  color: #58636a;
+  color: #5a5a5a;
   margin: 1.5rem 0;
   padding-left: 0.75rem; }
 
 cite {
-  color: #6f7d86;
+  color: #747474;
   font-style: italic; }
   cite:before {
     content: "\2014 \00A0"; }
@@ -1124,7 +1237,7 @@ table td, table th {
     ==========================================================================
 
     Icons
-    1. 
+    1. Contact Icons: 
 
     CSS FORMATTING
     1. Positioning
@@ -1135,8 +1248,30 @@ table td, table th {
     ==========================================================================
     ========================================================================== */
 /*  ========================================================================== 
-	1. 
+	1. Contact Icons
     ========================================================================== */
+.icon-contact-std, .icon-twitter {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  fill: #343434;
+  transition: all 0.2s ease-in-out; }
+
+/*  Icon Standard
+    ========================================================================== */
+.icon-contact-std {
+  width: 60px;
+  height: 60px; }
+
+/*  Icon Twitter
+    ========================================================================== */
+.icon-twitter {
+  top: 12px;
+  width: 35px;
+  height: 35px;
+  fill: white; }
+
 /*  ==========================================================================
     ==========================================================================
 
@@ -1266,7 +1401,7 @@ table td, table th {
     ==========================================================================
 
     Home
-    1. 
+    1. Header
 
     CSS FORMATTING
     1. Positioning
@@ -1277,8 +1412,77 @@ table td, table th {
     ==========================================================================
     ========================================================================== */
 /*  ========================================================================== 
-	1. 
+	1. Header
     ========================================================================== */
+body {
+  background: url("../images/bg.png") repeat top left; }
+
+.header {
+  *zoom: 1;
+  width: auto;
+  max-width: 680px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 200px;
+  text-align: center; }
+  .header:before, .header:after {
+    content: '';
+    display: table; }
+  .header:after {
+    clear: both; }
+  .header p {
+    margin-bottom: 25px; }
+
+/*  Header Title
+    ========================================================================== */
+.header-title {
+  margin: 0px 0px 30px;
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 1;
+  color: #0853a8; }
+
+/*  Header Sub Title
+    ========================================================================== */
+.header-title-sub {
+  margin-top: 5px;
+  position: relative;
+  display: block;
+  font-size: 32px;
+  font-size: 3.2rem;
+  color: #343434; }
+  .header-title-sub:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto; }
+
+/*  Contact Link
+    ========================================================================== */
+.contact-link {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  font-size: 0px; }
+  .contact-link:hover .icon-contact-std {
+    fill: #0853a8; }
+
+/*  Contact Link Twitter
+    ========================================================================== */
+.contact-link-twitter {
+  background-color: #343434;
+  transition: all 0.2s ease-in-out; }
+  .contact-link-twitter:hover {
+    background-color: #0853a8; }
+
 /*  ==========================================================================
 	7. Vendor 
 	========================================================================== */

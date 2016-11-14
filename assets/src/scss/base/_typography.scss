@@ -17,37 +17,26 @@
 /*  ========================================================================== 
     1. Font Definitions
     ========================================================================== */
-
-    @include font-face(open_sansregular, '../fonts/opensans-regular-webfont', 400, normal);
-    @include font-face(open_sansbold, '../fonts/opensans-bold-webfont', 700, normal);
-    @include font-face(open_sansitalic, '../fonts/opensans-italic-webfont', 700, italic);
     
+    %base-font {
+        font-family: 'Montserrat', $fallback-stack;
+        font-style: normal;
+    }    
     
-/*  Open Sans Regular
+/*  Montserrat Regular
     ========================================================================== */
 
     .sans-regular {
-        font-family: 'open_sansregular', $fallback-stack;
+        @extend %base-font;
         font-weight: 400;
-        font-style: normal;
     }
 
-/*  Open Sans Italic
-    ========================================================================== */
-
-    .sans-italic {
-        font-family: 'open_sansitalic', $fallback-stack;
-        font-weight: 400;
-        font-style: italic;
-    }
-
-/*  Open Sans Bold
+/*  Montserrat Bold
     ========================================================================== */
 
     .sans-bold {
-        font-family: 'open_sansbold', $fallback-stack;
+        @extend %base-font;
         font-weight: 700;
-        font-style: normal;
     }
 
 /*  ==========================================================================
@@ -118,11 +107,12 @@
     }
 
     a {
-        color: $base-link-color;
-        text-decoration: none;
+        color: $blue;
+        text-decoration: underline;
 
         &:hover {
-            color: $hover-link-color;
+            // color: $hover-link-color;
+            text-decoration: none;
         }
 
         &:active, &:focus {
@@ -159,8 +149,4 @@
     strong,
     p.bold {
         @extend .sans-bold;
-    }
-
-    em {
-        @extend .sans-italic; 
     }
