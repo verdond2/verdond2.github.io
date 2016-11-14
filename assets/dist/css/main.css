@@ -1471,7 +1471,10 @@ body {
   border-radius: 50%;
   background-color: white;
   display: inline-block;
-  font-size: 0px; }
+  font-size: 0px;
+  margin-right: 5px; }
+  .contact-link:last-of-type {
+    margin-right: 0px; }
   .contact-link:hover .icon-contact-std {
     fill: #0853a8; }
 

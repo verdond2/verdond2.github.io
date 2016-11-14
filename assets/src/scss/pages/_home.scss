@@ -73,6 +73,11 @@
         background-color: white;
         display: inline-block;  
         font-size: 0px; 
+        margin-right: 5px;
+        
+        &:last-of-type {
+            margin-right: 0px;
+        }
 
         &:hover {
             .icon-contact-std {
