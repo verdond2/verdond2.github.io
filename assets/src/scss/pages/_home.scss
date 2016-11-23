@@ -22,8 +22,8 @@
     }
 
     .header {
-        @include center(680px, $pad:15px);
-        margin-top: 200px;
+        @include center(680px);
+        padding: 200px 15px;
         text-align: center;
 
         p {
