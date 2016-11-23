@@ -1436,6 +1436,12 @@ body {
     clear: both; }
   .header p {
     margin-bottom: 25px; }
+  @media (max-width: 568px) {
+    .header {
+      padding: 150px 15px; } }
+  @media (max-width: 400px) {
+    .header {
+      padding: 100px 15px; } }
 
 /*  Header Title
     ========================================================================== */
