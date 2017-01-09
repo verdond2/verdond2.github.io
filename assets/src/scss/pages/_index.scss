@@ -42,7 +42,7 @@
 /*  Header Title
     ========================================================================== */
 
-    .header-title {
+    .header__title {
         margin: 0px 0px 30px;
         @include font-size(42);
         line-height: 1;
@@ -56,7 +56,7 @@
 /*  Header Sub Title
     ========================================================================== */
 
-    .header-title-sub {
+    .header__title-sub {
         margin-top: 5px;
         position: relative;
         display: block;
