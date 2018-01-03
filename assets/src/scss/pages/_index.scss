@@ -3,6 +3,7 @@
 
     Home
     1. Header
+    2. Icons
 
     CSS FORMATTING
     1. Positioning
@@ -44,12 +45,12 @@
 
     .header__title {
         margin: 0px 0px 30px;
-        @include font-size(42);
+        font-size: 42px;
         line-height: 1;
         color: $blue;
 
         @include breakpoint($break-370){
-            @include font-size(32);
+            font-size: 32px;
         }
     }
     
@@ -61,11 +62,11 @@
         position: relative;
         display: block;
         @extend .sans-regular;
-        @include font-size(32);
+        font-size: 32px;
         color: $navy;
 
         @include breakpoint($break-370){
-            @include font-size(22);
+            font-size: 22px;
         }
     }
     
@@ -92,16 +93,37 @@
             }
         }
     }
+
+/*  ========================================================================== 
+	2. Icons
+    ========================================================================== */
     
-/*  Contact Link Twitter
+    %icon-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: $navy;
+        transition: all 0.2s ease-in-out;
+    }
+    
+/*  Icon Standard
     ========================================================================== */
 
-    .contact-link-twitter {
-        background-color: $navy;
-        @include transition(all 0.2s ease-in-out);
-
-        &:hover {
-            background-color: $blue;
-        }
+    .icon-contact-std {
+        @extend %icon-contact;
+        width: 60px;
+        height: 60px;
     }
+    
+/*  Icon Twitter
+    ========================================================================== */
+
+    .icon-twitter {
+        top: 12px;
+        @extend %icon-contact;
+        width: 35px;
+        height: 35px;
+        fill: white;
+    }
+    
 

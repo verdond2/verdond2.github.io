@@ -6,7 +6,6 @@
 	var baseDir = './'; // Browsersync server base directory when not using proxy url above
 	var showScssLint = false; // turn scsslint on or off
 	var showJsHint = true; // turn JShint on or off
-	var spritesPrefix = "icon-";
 
 	/*  Style paths
 	    ========================================================================== */
@@ -27,7 +26,6 @@
 
 	var imgSRC = 'assets/src/images/**';
 	var imgDist = 'assets/dist/images/';
-	var svgSRC = 'assets/src/svg-sprites/**';
 
 
 /*  ==========================================================================
@@ -49,8 +47,6 @@
 		// Utility related plugins.
 		path = require('path'),
 		imagemin = require('gulp-imagemin'),
-		svgstore = require('gulp-svgstore'),
-		svgmin = require('gulp-svgmin'),
 		gulpif = require('gulp-if'),
 		plumber = require('gulp-plumber'),
 		rename = require("gulp-rename"),
@@ -115,32 +111,6 @@
     		}))
     		.pipe(gulp.dest(imgDist));
     });
-
-    gulp.task('svgsprites', function () {
-	    return gulp.src(svgSRC)
-	    	.pipe(plumber({ errorHandler: reportError }))
-	        .pipe(rename({prefix: spritesPrefix}))
-	        .pipe(svgmin({
-	                removeDoctype: true
-	            }, {
-	                removeComments: true
-	            }, {
-	                cleanupNumericValues: {
-	                    floatPrecision: 2
-	                }
-	            }, {
-	                convertColors: {
-	                    names2hex: true,
-	                    rgb2hex: true
-	                }
-	            }, {
-	            	cleanupIDs: {
-                        minify: true
-                    }
-			}))
-	        .pipe(svgstore({ inlineSvg: true }))
-	        .pipe(gulp.dest(imgDist));
-	});
 
 /*  ==========================================================================
    	BrowserSync
@@ -221,9 +191,8 @@
 	// files to watch
 	gulp.task('watch', function() {
 	    gulp.watch(styleWatchFiles, ['styles']);
-	    gulp.watch(jsWatchFiles, ['js-watch']);
+	    // gulp.watch(jsWatchFiles, ['js-watch']);
 	    gulp.watch(imgSRC, ['images']);
-	    gulp.watch(svgSRC, ['svgsprites']);
 	    gulp.watch("*.html").on("change", browserSync.reload);
 	   	gulp.watch("*.php").on("change", browserSync.reload);
 	});

@@ -531,10 +531,6 @@ textarea {
  */
 /*  Breakpoint SASS
 	========================================================================== */
-/*  Bourbon
-	========================================================================== */
-/*  Outdated Browser
-	========================================================================== */
 /*  ==========================================================================
 	2. Helpers 
 	========================================================================== */
@@ -576,18 +572,6 @@ textarea {
 	========================================================================== */
 /*  Text Colours
 	========================================================================== */
-/*  Background Colours
-	========================================================================== */
-/*  Font Colours
-	========================================================================== */
-/*  Anchor Colours
-	========================================================================== */
-/*  Border Colours
-	========================================================================== */
-/*  Form Colours
-	========================================================================== */
-/*  Misc Colours
-	========================================================================== */
 /*  ==========================================================================
 	3. Breakpoints 
 	========================================================================== */
@@ -595,155 +579,17 @@ textarea {
 	========================================================================== */
 /*  Mobile / Tablet
 	========================================================================== */
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Hide visually and from screen readers:
- * http://juicystudio.com/article/screen-readers-display-none.php
- */
-.hidden {
-  display: none !important;
-  visibility: hidden; }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-.invisible {
-  visibility: hidden; }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.clearfix:after {
-  clear: both; }
-
 /*  ==========================================================================
 	3. Base 
 	========================================================================== */
-/*  ==========================================================================
-    ==========================================================================
-
-    General
-    1. Base Styles 
-    2. Browser Upgrade Prompt 
-    3. Images
-
-    CSS FORMATTING
-    1. Positioning
-    2. Display & Box Model
-    3. Text
-    4. Other
-
-    ==========================================================================
-    ========================================================================== */
-/*
-    * What follows is the result of much research on cross-browser styling.
-    * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-    * Kroc Camen, and the H5BP dev community and team.
-*/
 /*  ========================================================================== 
-    1. Base Styles opinionated defaults 
+    1. Base Styles 
     ========================================================================== */
 html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
-
-/*
-    * Remove text-shadow in selection highlight:
-    * https://twitter.com/miketaylr/status/12228805301
-    *
-    * These selection rule sets have to be separate.
-    * Customize the background color to match your design.
- */
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none; }
-
-::selection {
-  background: #0853a8;
-  text-shadow: none; }
-
-/*
-    * Remove the gap between audio, canvas, iframes,
-    * images, videos and the bottom of their containers:
-    * https://github.com/h5bp/html5-boilerplate/issues/440
-*/
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle; }
-
-/*  ==========================================================================
-    2. Browser Upgrade Prompt 
-    ========================================================================== */
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0; }
-
-/*  ==========================================================================
-    3. Images
-    ========================================================================== */
-img,
-picture {
-  margin: 0;
-  max-width: 100%; }
-
-img {
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-  image-rendering: optimizeQuality; }
 
 /*  ==========================================================================
     ==========================================================================
@@ -763,8 +609,7 @@ img {
 /*  ========================================================================== 
     1. Font Definitions
     ========================================================================== */
-.sans-regular, body, .header__title-sub, .sans-bold, strong,
-p.bold {
+.sans-regular, body, .header__title-sub, .sans-bold {
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-style: normal; }
 
@@ -775,8 +620,7 @@ p.bold {
 
 /*  Montserrat Bold
     ========================================================================== */
-.sans-bold, strong,
-p.bold {
+.sans-bold {
   font-weight: 700; }
 
 /*  ==========================================================================
@@ -785,51 +629,13 @@ p.bold {
 /*  HTML & BODY
     ========================================================================== */
 html {
-  font-size: 62.5%; }
+  font-size: 14px; }
 
 body {
-  -ms-font-feature-settings: "kern", "liga", "pnum";
-  font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
-  background-color: #e1e3e4;
   color: #343434;
   font-size: 14px;
-  font-size: 1.4rem;
   line-height: 1.5; }
-
-/*  Titles
-    ========================================================================== */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.25; }
-
-h1 {
-  font-size: 37px;
-  font-size: 3.7rem; }
-
-h2 {
-  font-size: 23px;
-  font-size: 2.3rem; }
-
-h3 {
-  font-size: 18px;
-  font-size: 1.8rem; }
-
-h4 {
-  font-size: 16px;
-  font-size: 1.6rem; }
-
-h5 {
-  font-size: 16px;
-  font-size: 1.6rem; }
-
-h6 {
-  font-size: 14px;
-  font-size: 1.4rem; }
 
 /*  Body Copy, Anchors, Quotes etc
     ========================================================================== */
@@ -842,74 +648,8 @@ a {
   a:hover {
     text-decoration: none; }
   a:active, a:focus {
-    color: #052f5f;
     outline: none; }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid 1px solid #e8e8e8;
-  margin: 1.5rem 0;
-  padding: 0; }
-
-blockquote {
-  border-left: 2px solid #e8e8e8;
-  color: #5a5a5a;
-  margin: 1.5rem 0;
-  padding-left: 0.75rem; }
-
-cite {
-  color: #747474;
-  font-style: italic; }
-  cite:before {
-    content: "\2014 \00A0"; }
-
-/*  ==========================================================================
-	4. Components 
-	========================================================================== */
-/*  ==========================================================================
-    ==========================================================================
-
-    Icons
-    1. Contact Icons: 
-
-    CSS FORMATTING
-    1. Positioning
-    2. Display & Box Model
-    3. Text
-    4. Other
-
-    ==========================================================================
-    ========================================================================== */
-/*  ========================================================================== 
-	1. Contact Icons
-    ========================================================================== */
-.icon-contact-std, .icon-twitter {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  margin: 0px auto;
-  fill: #343434;
-  transition: all 0.2s ease-in-out; }
-
-/*  Icon Standard
-    ========================================================================== */
-.icon-contact-std {
-  width: 60px;
-  height: 60px; }
-
-/*  Icon Twitter
-    ========================================================================== */
-.icon-twitter {
-  top: 12px;
-  width: 35px;
-  height: 35px;
-  fill: white; }
-
-/*  ==========================================================================
-	5. Layout 
-	========================================================================== */
 /*  ==========================================================================
 	6. Pages 
 	========================================================================== */
@@ -918,6 +658,7 @@ cite {
 
     Home
     1. Header
+    2. Icons
 
     CSS FORMATTING
     1. Positioning
@@ -964,13 +705,11 @@ body {
 .header__title {
   margin: 0px 0px 30px;
   font-size: 42px;
-  font-size: 4.2rem;
   line-height: 1;
   color: #0853a8; }
   @media (max-width: 370px) {
     .header__title {
-      font-size: 32px;
-      font-size: 3.2rem; } }
+      font-size: 32px; } }
 
 /*  Header Sub Title
     ========================================================================== */
@@ -979,12 +718,10 @@ body {
   position: relative;
   display: block;
   font-size: 32px;
-  font-size: 3.2rem;
   color: #343434; }
   @media (max-width: 370px) {
     .header__title-sub {
-      font-size: 22px;
-      font-size: 2.2rem; } }
+      font-size: 22px; } }
 
 /*  Contact Link
     ========================================================================== */
@@ -1002,14 +739,29 @@ body {
   .contact-link:hover .icon-contact-std {
     fill: #0853a8; }
 
-/*  Contact Link Twitter
+/*  ========================================================================== 
+	2. Icons
     ========================================================================== */
-.contact-link-twitter {
-  background-color: #343434;
+.icon-contact-std, .icon-twitter {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  fill: #343434;
   transition: all 0.2s ease-in-out; }
-  .contact-link-twitter:hover {
-    background-color: #0853a8; }
 
-/*  ==========================================================================
-	7. Vendor 
-	========================================================================== */
+/*  Icon Standard
+    ========================================================================== */
+.icon-contact-std {
+  width: 60px;
+  height: 60px; }
+
+/*  Icon Twitter
+    ========================================================================== */
+.icon-twitter {
+  top: 12px;
+  width: 35px;
+  height: 35px;
+  fill: white; }
