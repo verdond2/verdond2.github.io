@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "Gulp Build System",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.14.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-cache": "^0.4.5",
     "gulp-clean-css": "^2.0.12",
     "gulp-if": "^2.0.1",
-    "gulp-imagemin": "^3.0.3",
     "gulp-include": "^2.3.1",
     "gulp-jshint": "^2.0.1",
     "gulp-notify": "^2.2.0",
@@ -22,8 +22,6 @@
     "gulp-scss-lint": "^0.4.0",
     "gulp-scss-lint-stylish": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-svgmin": "^1.2.2",
-    "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.2",

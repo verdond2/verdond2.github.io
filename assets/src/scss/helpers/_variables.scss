@@ -24,62 +24,23 @@
 
 	$fallback-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-/*  Font Sizes
-	========================================================================== */
-
-	$h1-font-size: 37;
-	$h2-font-size: 23;
-	$h3-font-size: 18;
-	$h4-font-size: 16;
-	$h5-font-size: 16;
-	$h6-font-size: 14;
-
 /*  Line Heights
 	========================================================================== */
 
 	$base-line-height: 1.5; 
-	$header-line-height: 1.25;
 
 /*  Other Sizes
 	========================================================================== */
 	
-	$base-border-radius: 3px;
 	$base-spacing: $base-line-height * 1rem;
-	$base-z-index: 0;
 
 /*  ==========================================================================
 	2. Colours 
 	========================================================================== */
 	
 	$grey: #e1e3e4;
-	$navy: #343434;
+	$dark-grey: #343434;
 	$blue: #0853a8;
-
-/*  Brand Colours 
-	========================================================================== */
-
-	$color-brand-1: $blue;
-	$color-brand-2: #00a77e;
-
-/*  Dark Colours
-	========================================================================== */
-
-	$color-dark-ui-1: #151a1d;
-	$color-dark-ui-2: #242b2f;
-	$color-dark-ui-3: #353c40;
-
-/*  Light Colours
-	========================================================================== */
-
-	$color-light-ui-1: #d3d3d3;
-	$color-light-ui-2: #e8e8e8;
-
-/*  Text Colours
-	========================================================================== */
-
-	$color-text-1: #353c40;
-	$color-text-2: #707578;
-	$color-text-3: #c1c0c0;
 	
 /*  ==========================================================================
 	3. Breakpoints 

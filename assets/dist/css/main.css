@@ -2,8 +2,7 @@
     ==========================================================================
 
     Main
-    1. Bower Components
-    2. Helpers
+    - Normalize
     3. Base
     4. Components
     5. Layout
@@ -20,85 +19,92 @@
     ==========================================================================
     ========================================================================== */
 /*  ========================================================================== 
-	1. Bower Components
+	- Normalize
     ========================================================================== */
-/*  Normalize
-	========================================================================== */
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
 /**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 html {
-  font-family: sans-serif;
-  /* 1 */
   line-height: 1.15;
-  /* 2 */
+  /* 1 */
   -ms-text-size-adjust: 100%;
-  /* 3 */
+  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 3 */ }
+  /* 2 */ }
 
+/* Sections
+   ========================================================================== */
 /**
  * Remove the margin in all browsers (opinionated).
  */
 body {
   margin: 0; }
 
-/* HTML5 display definitions
-   ========================================================================== */
 /**
  * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
  */
 article,
 aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-main,
-menu,
 nav,
-section,
-summary {
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
   /* 1 */
   display: block; }
 
 /**
- * Add the correct display in IE 9-.
+ * Add the correct margin in IE 8.
  */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; }
+figure {
+  margin: 1em 40px; }
 
 /**
- * Add the correct display in iOS 4-7.
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
  */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
 
 /**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
  */
-progress {
-  vertical-align: baseline; }
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
-/**
- * Add the correct display in IE 10-.
- * 1. Add the correct display in IE.
- */
-template,
-[hidden] {
-  display: none; }
-
-/* Links
+/* Text-level semantics
    ========================================================================== */
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -111,17 +117,7 @@ a {
   /* 2 */ }
 
 /**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-a:active,
-a:hover {
-  outline-width: 0; }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * 1. Remove the bottom border in Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
@@ -147,18 +143,22 @@ strong {
   font-weight: bolder; }
 
 /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
  * Add the correct font style in Android 4.3-.
  */
 dfn {
   font-style: italic; }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
 
 /**
  * Add the correct background and color in IE 9-.
@@ -193,6 +193,20 @@ sup {
 /* Embedded content
    ========================================================================== */
 /**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
  * Remove the border on images inside links in IE 10-.
  */
 img {
@@ -204,43 +218,10 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/**
- * Add the correct margin in IE 8.
- */
-figure {
-  margin: 1em 40px; }
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
-
 /* Forms
    ========================================================================== */
 /**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
 button,
@@ -248,16 +229,14 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
   /* 1 */
   margin: 0;
   /* 2 */ }
-
-/**
- * Restore the font weight unset by the previous rule.
- */
-optgroup {
-  font-weight: bold; }
 
 /**
  * Show the overflow in IE.
@@ -309,12 +288,10 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText; }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.75em 0.625em; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -335,6 +312,16 @@ legend {
   /* 3 */
   white-space: normal;
   /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
 
 /**
  * Remove the default vertical scrollbar in IE.
@@ -371,18 +358,11 @@ textarea {
   /* 2 */ }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54; }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -394,141 +374,44 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/*  Jeet
-	========================================================================== */
-/*  Syntax Quick Reference
-  --------------------------
-  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
-  span($ratio: 1, $offset: 0)
-  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
-  unshift()
-  edit()
-  center($max_width: 1410px, $pad: 0)
-  stack($pad: 0, $align: false)
-  unstack()
-  align($direction: both)
-  cf()
-*/
-/**
- * Grid settings.
- * All values are defaults and can therefore be easily overidden.
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
  */
-/**
- * List functions courtesy of the wonderful folks at Team Sass.
- * Check out their awesome grid: Singularity.
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
  */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
 /**
- * Get  percentage from a given ratio.
- * @param {number} [$ratio=1] - The column ratio of the element.
- * @returns {number} - The percentage value.
+ * Add the correct display in IE 9-.
  */
+canvas {
+  display: inline-block; }
+
 /**
- * Work out the column widths based on the ratio and gutter sizes.
- * @param {number} [$ratios=1] - The column ratio of the element.
- * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
- * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ * Add the correct display in IE.
  */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
 /**
- * Get the set layout direction for the project.
- * @returns {string} $direction - The layout direction.
+ * Add the correct display in IE 10-.
  */
-/**
- * Replace a specified list value with a new value (uses built in set-nth() if available)
- * @param {list} $list - The list of values you want to alter.
- * @param {number} $index - The index of the list item you want to replace.
- * @param {*} $value - The value you want to replace $index with.
- * @returns {list} $list - The list with the value replaced or removed.
- * @warn if an invalid index is supplied.
- */
-/**
- * Reverse a list (progressively enhanced for Sass 3.3)
- * @param {list} $list - The list of values you want to reverse.
- * @returns {list} $result - The reversed list.
- */
-/**
- * Get the opposite direction to a given value.
- * @param {string} $dir - The direction you want the opposite of.
- * @returns {string} - The opposite direction to $dir.
- * @warn if an incorrect string is provided.
- */
-/**
- * Style an element as a column with a gutter.
- * @param {number} [$ratios=1] - A width relative to its container as a fraction.
- * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
- * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
- * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
- * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
- */
-/**
- * An alias for the column mixin.
- * @param [$args...] - All arguments get passed through to column().
- */
-/**
- * Get the width of a column and nothing else.
- * @param {number} [$ratios=1] - A width relative to its container as a fraction.
- * @param {number} [$g=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
- */
-/**
- * Get the gutter size of a column and nothing else.
- * @param {number} [ratios=1] - A width relative to its container as a fraction.
- * @param {number} [g=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
- */
-/**
- * An alias for the column-width function.
- * @param [$args...] - All arguments get passed through to column().
- */
-/**
- * An alias for the column-gutter function.
- * @param [$args...] - All arguments get passed through to column().
- */
-/**
- * Style an element as a column without any gutters for a seamless row.
- * @param {number} [$ratios=1] - A width relative to its container as a fraction.
- * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
- * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
- * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
- */
-/**
- * Reorder columns without altering the HTML.
- * @param {number} [$ratios=0] - Specify how far along you want the element to move.
- * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
- * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
- */
-/**
- * Reset an element that has had shift() applied to it.
- */
-/**
- * View the grid and its layers for easy debugging.
- * @param {string} [$color=black] - The background tint applied.
- * @param {boolean} [$important=false] - Whether to apply the style as !important.
- */
-/**
- *  Alias for edit().
- */
-/**
- * Horizontally center an element.
- * @param {number} [$max-width=1410px] - The max width the element can be.
- * @param {number} [$pad=0] - Specify the element's left and right padding.
- */
-/**
- * Uncenter an element.
- */
-/**
- * Stack an element so that nothing is either side of it.
- * @param {number} [$pad=0] - Specify the element's left and right padding.
- * @param {boolean/string} [$align=false] - Specify the text align for the element.
- */
-/**
- * Unstack an element.
- */
-/**
- * Center an element on either or both axes.
- * @requires A parent container with relative positioning.
- * @param {string} [$direction=both] - Specify which axes to center the element on.
- */
-/**
- * Apply a clearfix to an element.
- */
+[hidden] {
+  display: none; }
+
 /*  Breakpoint SASS
 	========================================================================== */
 /*  ==========================================================================
@@ -555,22 +438,12 @@ textarea {
     ========================================================================== */
 /*  Fallback Stack
 	========================================================================== */
-/*  Font Sizes
-	========================================================================== */
 /*  Line Heights
 	========================================================================== */
 /*  Other Sizes
 	========================================================================== */
 /*  ==========================================================================
 	2. Colours 
-	========================================================================== */
-/*  Brand Colours 
-	========================================================================== */
-/*  Dark Colours
-	========================================================================== */
-/*  Light Colours
-	========================================================================== */
-/*  Text Colours
 	========================================================================== */
 /*  ==========================================================================
 	3. Breakpoints 
@@ -582,15 +455,6 @@ textarea {
 /*  ==========================================================================
 	3. Base 
 	========================================================================== */
-/*  ========================================================================== 
-    1. Base Styles 
-    ========================================================================== */
-html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
 /*  ==========================================================================
     ==========================================================================
 
@@ -657,48 +521,35 @@ a {
     ==========================================================================
 
     Home
-    1. Header
-    2. Icons
-
-    CSS FORMATTING
-    1. Positioning
-    2. Display & Box Model
-    3. Text
-    4. Other
+    - General
+    - Header
+    - Icons
 
     ==========================================================================
     ========================================================================== */
 /*  ========================================================================== 
-	1. Header
+	- General
     ========================================================================== */
-body {
-  background: url("../images/bg.png") repeat top left; }
+html {
+  box-sizing: border-box; }
 
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ececec' fill-opacity='0.53' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
+
+/*  ==========================================================================
+    - Header
+    ========================================================================== */
 .header {
-  *zoom: 1;
-  width: auto;
+  margin: 0 auto;
   max-width: 680px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
   padding: 200px 15px;
   text-align: center; }
-  .header:before, .header:after {
-    content: '';
-    display: table; }
-  .header:after {
-    clear: both; }
   .header p {
     margin-bottom: 25px; }
-  @media (max-width: 568px) {
-    .header {
-      padding: 150px 15px; } }
-  @media (max-width: 400px) {
-    .header {
-      padding: 100px 15px; } }
 
 /*  Header Title
     ========================================================================== */
@@ -707,9 +558,6 @@ body {
   font-size: 42px;
   line-height: 1;
   color: #0853a8; }
-  @media (max-width: 370px) {
-    .header__title {
-      font-size: 32px; } }
 
 /*  Header Sub Title
     ========================================================================== */
@@ -719,9 +567,6 @@ body {
   display: block;
   font-size: 32px;
   color: #343434; }
-  @media (max-width: 370px) {
-    .header__title-sub {
-      font-size: 22px; } }
 
 /*  Contact Link
     ========================================================================== */
@@ -740,7 +585,7 @@ body {
     fill: #0853a8; }
 
 /*  ========================================================================== 
-	2. Icons
+	- Icons
     ========================================================================== */
 .icon-contact-std, .icon-twitter {
   display: -ms-flexbox;

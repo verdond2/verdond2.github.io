@@ -2,41 +2,42 @@
     ==========================================================================
 
     Home
-    1. Header
-    2. Icons
-
-    CSS FORMATTING
-    1. Positioning
-    2. Display & Box Model
-    3. Text
-    4. Other
+    - General
+    - Header
+    - Icons
 
     ==========================================================================
     ========================================================================== */
 
 /*  ========================================================================== 
-	1. Header
+	- General
     ========================================================================== */
     
-    body {
-        background: url('../images/bg.png') repeat top left;
+    html {
+        box-sizing: border-box;
     }
 
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ececec' fill-opacity='0.53' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+/*  ==========================================================================
+    - Header
+    ========================================================================== */
+    
     .header {
-        @include center(680px);
+        margin: 0 auto;
+        max-width: 680px;
         padding: 200px 15px;
         text-align: center;
 
         p {
             margin-bottom: 25px;
-        }
-
-        @include breakpoint($break-568){
-            padding: 150px 15px;
-        } 
-
-        @include breakpoint($break-400){
-            padding: 100px 15px;
         }
     }
     
@@ -49,25 +50,25 @@
         line-height: 1;
         color: $blue;
 
-        @include breakpoint($break-370){
-            font-size: 32px;
-        }
+        // @include breakpoint($break-370){
+        //     font-size: 32px;
+        // }
     }
     
 /*  Header Sub Title
     ========================================================================== */
 
     .header__title-sub {
+        @extend .sans-regular;
         margin-top: 5px;
         position: relative;
         display: block;
-        @extend .sans-regular;
         font-size: 32px;
-        color: $navy;
+        color: $dark-grey;
 
-        @include breakpoint($break-370){
-            font-size: 22px;
-        }
+        // @include breakpoint($break-370){
+        //     font-size: 22px;
+        // }
     }
     
 /*  Contact Link
@@ -95,14 +96,14 @@
     }
 
 /*  ========================================================================== 
-	2. Icons
+	- Icons
     ========================================================================== */
     
     %icon-contact {
         display: flex;
         align-items: center;
         justify-content: center;
-        fill: $navy;
+        fill: $dark-grey;
         transition: all 0.2s ease-in-out;
     }
     

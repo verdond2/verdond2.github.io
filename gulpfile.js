@@ -21,12 +21,6 @@
 	var jsDist = 'assets/dist/js/'; // Path to place the compiled js file
 	var jsWatchFiles = 'assets/src/js/**/*.js'; // Path to all js files inside src folder
 
-	/*  Images and SVG paths
-	    ========================================================================== */
-
-	var imgSRC = 'assets/src/images/**';
-	var imgDist = 'assets/dist/images/';
-
 
 /*  ==========================================================================
     2. Requires
@@ -46,13 +40,11 @@
 		cleanCSS = require('gulp-clean-css'),
 		// Utility related plugins.
 		path = require('path'),
-		imagemin = require('gulp-imagemin'),
 		gulpif = require('gulp-if'),
 		plumber = require('gulp-plumber'),
 		rename = require("gulp-rename"),
 		notify = require("gulp-notify"),
 		gutil = require('gulp-util'),
-		cache = require('gulp-cache'),
 		browserSync = require('browser-sync').create();
 
 /*  ==========================================================================
@@ -69,7 +61,7 @@
 			.pipe(gulp.dest(styleDist)) // copy *.css into destination
 			.pipe(cleanCSS()) // clean and minify *.css
 			.pipe(rename({ extname: '.min.css' })) // rename *.css to *.min.css
-			.pipe(sourcemaps.write())
+			.pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest(styleDist)) // copy *.min.css to destination
 			.pipe(notify({ title: "Styles Task", message: "Styles compiled successfully.", onLast: true }))
 			.pipe(browserSync.stream());
@@ -96,21 +88,6 @@
 	    browserSync.reload();
 	    done();
 	});
-
-/*  ==========================================================================
-   	Images and SVGs
-    ========================================================================== */
-
-    gulp.task('images', function(){
-    	return gulp.src(imgSRC)
-    		.pipe(plumber({ errorHandler: reportError }))
-    		.pipe(imagemin({
-    			optimizationLevel: 3,
-	            progessive: false,
-	            interlaced: true
-    		}))
-    		.pipe(gulp.dest(imgDist));
-    });
 
 /*  ==========================================================================
    	BrowserSync
@@ -176,15 +153,6 @@
 	}
 
 /*  ==========================================================================
-   	Utilities
-    ========================================================================== */
-
-    //clear the gulp cache intermitently
-	gulp.task('clear', function(done) {
-	    return cache.clearAll(done);
-	});
-
-/*  ==========================================================================
     Watch
     ========================================================================== */	
 
@@ -192,7 +160,7 @@
 	gulp.task('watch', function() {
 	    gulp.watch(styleWatchFiles, ['styles']);
 	    // gulp.watch(jsWatchFiles, ['js-watch']);
-	    gulp.watch(imgSRC, ['images']);
+	    // gulp.watch(imgSRC, ['images']);
 	    gulp.watch("*.html").on("change", browserSync.reload);
 	   	gulp.watch("*.php").on("change", browserSync.reload);
 	});

@@ -52,10 +52,10 @@
 
     body {
         -webkit-font-smoothing: antialiased;
-        color: $navy;
+        color: $dark-grey;
         @extend .sans-regular;
         font-size: 14px;
-        line-height: $base-line-height; 
+        line-height: 1.5; 
     }
  
 /*  Body Copy, Anchors, Quotes etc
