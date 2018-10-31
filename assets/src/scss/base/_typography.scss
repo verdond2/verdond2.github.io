@@ -52,7 +52,7 @@
 
     body {
         -webkit-font-smoothing: antialiased;
-        color: $dark-grey;
+        color: white;
         @extend .sans-regular;
         font-size: 14px;
         line-height: 1.5; 
@@ -66,7 +66,7 @@
     }
 
     a {
-        color: $blue;
+        color: $orange;
         text-decoration: underline;
 
         &:hover {
