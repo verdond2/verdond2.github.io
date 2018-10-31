@@ -22,8 +22,8 @@
     }
 
     body {
-        background-color: #ffffff;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ececec' fill-opacity='0.53' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+        background-color: #18161c;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     }
 
     html, body {
@@ -60,82 +60,17 @@
         font-size: 42px;
         line-height: 1;
         color: $blue;
-
-        // @include breakpoint($break-370){
-        //     font-size: 32px;
-        // }
     }
     
-/*  Header Sub Title
+/*  Header postion
     ========================================================================== */
 
-    .header__title-sub {
+    .header__position {
         @extend .sans-regular;
         margin-top: 5px;
         position: relative;
         display: block;
         font-size: 32px;
         color: $dark-grey;
-
-        // @include breakpoint($break-370){
-        //     font-size: 22px;
-        // }
     }
     
-/*  Contact Link
-    ========================================================================== */
-
-    .contact-link {
-        position: relative;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: white;
-        display: inline-block;  
-        font-size: 0px; 
-        margin-right: 5px;
-        
-        &:last-of-type {
-            margin-right: 0px;
-        }
-
-        &:hover {
-            .icon-contact-std {
-                fill: $blue;
-            }
-        }
-    }
-
-/*  ========================================================================== 
-	- Icons
-    ========================================================================== */
-    
-    %icon-contact {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        fill: $dark-grey;
-        transition: all 0.2s ease-in-out;
-    }
-    
-/*  Icon Standard
-    ========================================================================== */
-
-    .icon-contact-std {
-        @extend %icon-contact;
-        width: 60px;
-        height: 60px;
-    }
-    
-/*  Icon Twitter
-    ========================================================================== */
-
-    .icon-twitter {
-        top: 12px;
-        @extend %icon-contact;
-        width: 35px;
-        height: 35px;
-        fill: white;
-    }
-    
-
