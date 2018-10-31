@@ -473,13 +473,13 @@ template {
 /*  ========================================================================== 
     1. Font Definitions
     ========================================================================== */
-.sans-regular, body, .header__title-sub, .sans-bold {
+.sans-regular, body, .header__position, .sans-bold {
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-style: normal; }
 
 /*  Montserrat Regular
     ========================================================================== */
-.sans-regular, body, .header__title-sub {
+.sans-regular, body, .header__position {
   font-weight: 400; }
 
 /*  Montserrat Bold
@@ -497,7 +497,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: #343434;
+  color: white;
   font-size: 14px;
   line-height: 1.5; }
 
@@ -507,7 +507,7 @@ p {
   margin: 0 0 0.75rem; }
 
 a {
-  color: #0853a8;
+  color: #f1510f;
   text-decoration: underline; }
   a:hover {
     text-decoration: none; }
@@ -537,8 +537,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ececec' fill-opacity='0.53' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
+  background-color: #18161c;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
 
 html, body {
   height: 100%; }
@@ -570,56 +570,13 @@ html, body {
   margin: 0px 0px 30px;
   font-size: 42px;
   line-height: 1;
-  color: #0853a8; }
+  color: #f1510f; }
 
-/*  Header Sub Title
+/*  Header postion
     ========================================================================== */
-.header__title-sub {
+.header__position {
   margin-top: 5px;
   position: relative;
   display: block;
   font-size: 32px;
-  color: #343434; }
-
-/*  Contact Link
-    ========================================================================== */
-.contact-link {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: white;
-  display: inline-block;
-  font-size: 0px;
-  margin-right: 5px; }
-  .contact-link:last-of-type {
-    margin-right: 0px; }
-  .contact-link:hover .icon-contact-std {
-    fill: #0853a8; }
-
-/*  ========================================================================== 
-	- Icons
-    ========================================================================== */
-.icon-contact-std, .icon-twitter {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  fill: #343434;
-  transition: all 0.2s ease-in-out; }
-
-/*  Icon Standard
-    ========================================================================== */
-.icon-contact-std {
-  width: 60px;
-  height: 60px; }
-
-/*  Icon Twitter
-    ========================================================================== */
-.icon-twitter {
-  top: 12px;
-  width: 35px;
-  height: 35px;
-  fill: white; }
+  color: white; }
